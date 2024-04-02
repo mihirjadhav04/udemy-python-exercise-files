@@ -1,8 +1,12 @@
+
+#******************************************** METHOD 1 *********************
 # file = open("sample.txt")
 # contents = file.read()
 # print(contents)
 # file.close()
 
+
+#******************************************** METHOD 2 *********************
 
 # 1. OPEN and READ from a FILE
 

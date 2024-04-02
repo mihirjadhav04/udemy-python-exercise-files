@@ -1,51 +1,56 @@
 # # Working with csv files in python
 
-# #! METHOD 1:
-# # with open("weather_data.csv") as data_file:
-# #     data = data_file.readlines()
-# #     print(data)
+#! METHOD 1:
+# with open("weather_data.csv") as data_file:
+#     data = data_file.readlines()
+#     print(data)
 
 
-# #! METHOD 2:
-# # import csv
 
-# # with open("weather_data.csv") as data_file:
-# #     data = csv.reader(data_file)
-# #     temperatures = []
-# #     for row in data:
-# #         # print(row)
-# #         if row[1] != "temp":
-# #             temperatures.append(int(row[1]))
-# #     print(temperatures)
+#! METHOD 2 - in-built csv library:
+# import csv
 
-# #! METHOD 3:
+# with open("weather_data.csv") as data_file:
+#     data = csv.reader(data_file) #creates a csv reader object.
+#     temperatures = []
+#     for row in data:
+#         # print(row)
+#         if row[1] != "temp":
+#             temperatures.append(int(row[1]))
+#     print(temperatures)
+
+
+
+
+#! METHOD 3 - pandas library:
+# here we don't need to open the file or use reader.
 # import pandas
 
 # data = pandas.read_csv("weather_data.csv")
-# # print(data["temp"])
-# # print(data.to_dict)
-# # temp_list = data["temp"].to_list()
-# # print(temp_list)
+# print(data["temp"])
+# print(data.to_dict)
+# temp_list = data["temp"].to_list()
+# print(temp_list)
 
 
-# # print(data["temp"].mean())
+# print(data["temp"].mean())
 
 
-# # Get data in Column
-# # print(data["condition"])
-# # print(data.condition)
+# Get data in Column
+# print(data["condition"])
+# print(data.condition)
 
 
-# # Get data in Row
-# # print(data[data.day == "Monday"])
-# # print(data[data.temp == data.temp.max()])
+# Get data in Row
+# print(data[data.day == "Monday"])
+# print(data[data.temp == data.temp.max()])
 
 
-# # monday = data[data.day == "Monday"]
-# # print(monday.condition)
+# monday = data[data.day == "Monday"]
+# print(monday.condition)
 
 
-# # Create a dataframe from scratch
+# Create a dataframe from scratch
 # data_dict = {"students": ["Mihir", "Bhavin", "Shani"], "scores": [89, 78, 65]}
 # data = pandas.DataFrame(data_dict)
 # print(data)
